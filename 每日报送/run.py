@@ -1,11 +1,11 @@
 import requests
 import json
-url = "https://jinshuju.net/graphql/f/MpTAhk"
+url = "https://jinshuju.net/graphql/f/kxrHuH"
 Data = {
     "operationName":"CreatePublishedFormEntry",
     "variables":{
         "input":{
-            "formId":"MpTAhk",
+            "formId":"kxrHuH",
             "entryAttributes":{
                 "field_27":"2020-05-01",
                 "field_9":"余李墨",#姓名
@@ -58,7 +58,7 @@ headers_urlencode = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 Edg/81.0.416.72",
     "Content-Type": "application/json;charset=UTF-8",
     "DNT":"1",
-    "Referer":"https://jinshuju.net/f/MpTAhk",
+    "Referer":"https://jinshuju.net/f/kxrHuH",
     "X-CSRF-TOKEN":"zjIi5bfz8NpIuumaQs8mFeCoylgbhmIfpDDmtn/yMHpuEuqW5YcjFbV9TQFp8RGwwePjw+SZI62S/M7jNfCZxw==",
     "Connection":"Keep-Alive",
     "Accept-Encoding": "gzip"
