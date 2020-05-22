@@ -1,17 +1,17 @@
 import requests
 import json
-url = "https://jinshuju.net/graphql/f/kxrHuH"
+url = "https://jinshuju.net/graphql/f/08VsEL"
 Data = {
     "operationName":"CreatePublishedFormEntry",
     "variables":{
         "input":{
-            "formId":"kxrHuH",
+            "formId":"08VsEL",
             "entryAttributes":{
-                "field_27":"2020-05-01",
+                "field_27":"2020-05-21",
                 "field_9":"余李墨",#姓名
-                "field_4":"",#学号
+                "field_4":"112022019051",#学号
                 "field_23":"15080119671",
-                "field_19":"6MYv",
+                "field_19":"Sf1V",#班级
                 "field_24":"福建省莆田市",
                 "field_11":{
                     "latitude":"25.408979",
@@ -37,13 +37,13 @@ Data = {
                 # },
                 "field_17":"无"
             },
-            "captchaData":'null',
-            "weixinAccessToken":'null',
-            "xFieldWeixinOpenid":'null',
-            "weixinInfo":'null',
-            "embedded":'false',
-            "backgroundImage":'false',
-            "formMargin":'false'
+        #    "captchaData":'null',
+        #    "weixinAccessToken":'null',
+        #    "xFieldWeixinOpenid":'null',
+        #    "weixinInfo":'null',
+            "embedded":False,
+            "backgroundImage":False,
+            "formMargin":False
         }
     },
     "extensions":{
@@ -58,7 +58,7 @@ headers_urlencode = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 Edg/81.0.416.72",
     "Content-Type": "application/json;charset=UTF-8",
     "DNT":"1",
-    "Referer":"https://jinshuju.net/f/kxrHuH",
+    "Referer":"https://jinshuju.net/f/08VsEL",
     "X-CSRF-TOKEN":"zjIi5bfz8NpIuumaQs8mFeCoylgbhmIfpDDmtn/yMHpuEuqW5YcjFbV9TQFp8RGwwePjw+SZI62S/M7jNfCZxw==",
     "Connection":"Keep-Alive",
     "Accept-Encoding": "gzip"

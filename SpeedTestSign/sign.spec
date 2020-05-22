@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['sign.py'],
-             pathex=['D:\\python\\SpeedTestDailySign'],
+             pathex=['D:\\python\\白嫖脚本\\SpeedTestSign'],
              binaries=[],
              datas=[],
              hiddenimports=[],
