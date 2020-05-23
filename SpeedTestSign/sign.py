@@ -5,13 +5,13 @@ import hashlib
 import random
 from stringToJson import StringToJSON
 from urllib.parse import urlencode
-auth = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYyYzQzYzdiOWZiODg0MjQxMDgxOWI1MjA0NDAyZTAwNGM2NzJhNWYzNjE2ZDNlZmI5NzE0NzY1YWQyNTM5ZDRmN2VkYWYzZTExNDI2YzdiIn0.eyJhdWQiOiIyIiwianRpIjoiZjJjNDNjN2I5ZmI4ODQyNDEwODE5YjUyMDQ0MDJlMDA0YzY3MmE1ZjM2MTZkM2VmYjk3MTQ3NjVhZDI1MzlkNGY3ZWRhZjNlMTE0MjZjN2IiLCJpYXQiOjE1OTAxMTcxMzgsIm5iZiI6MTU5MDExNzEzOCwiZXhwIjoxNTkxNDEyNDA3LCJzdWIiOiIxMDY2NDQ3MSIsInNjb3BlcyI6W119.vRL6n8VX0bn1RgPSxq7uClDfdJA3XWewL9vBa3Hl3Krl342la_JmN3pQud12NfDYbx-WT5JMjvtRdF-SqIuHx9nvwN0p3JGrRW0-pezXk0RZrJ7rpSwrvQyuryzROBjI8Pa0XEoxsDvJ2u1oixJ9SACAmufpDuyKyp5W9J1EtOBWc7um9jxstVmrzoPuoSOYlT1KloJY9DBckOTzfNhITGouC0VqevdtNyxlTUq-wZmiGpokF_tkOwC6fTrZJbbdAjaYdj0vhT36fXq32aHCUH2z3M1MzVrNGY72X6OGo1nSDs1LEQ9om7_glvdVkaVMnSjD39i4l4ImCHcjs9WWQXVF5RZiP4mhYDZEvtMARh2ED9TEMSZxqFC9-Mh7E5jqO_UX6CHcHB6NW7hp1aZagLQQVYQqc-Jghw90whJp4cH7ZugRF67dHEM-xUXMmw6_X4HAFuLXGdG-Y9lAaANyyBbOIMNodr033R3vVo2tQkfKnqn7CFxnmzbXIqTXxxqlsdgrVUXu9Z6N46ouqbfu3Bvo-kBIjZisnZwPXXf0FeenNoQGr860CR2ZauoNq-CrtcFKoba6x9RIJMyEalohFZx3zqBSkkk0B2dVXjdzvYE09zPITV9sBU7VQ_iay7o-GbkE0UHilyaVE4fUmfPqSuZGqL10CXDyUoNaplsdt6g"
+auth = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlMDBkMDI5Mzk3MWE0ZDc3M2ExMWYwMWIxYTRjMWMyMmNhYjhlZDhiZDYyNzg1Y2RhYjYyY2M1NzM4NWEwNmExZDg0ZWY4ODE4YTM1MTY1In0.eyJhdWQiOiIyIiwianRpIjoiZmUwMGQwMjkzOTcxYTRkNzczYTExZjAxYjFhNGMxYzIyY2FiOGVkOGJkNjI3ODVjZGFiNjJjYzU3Mzg1YTA2YTFkODRlZjg4MThhMzUxNjUiLCJpYXQiOjE1OTAxMzI3NTEsIm5iZiI6MTU5MDEzMjc1MSwiZXhwIjoxNTkxNDI2ODA5LCJzdWIiOiIxMDY2NDQ3MSIsInNjb3BlcyI6W119.PcV2AC_9QcfWwWlGGI6enHIHfuC_pFZwaj9v391zhsFNevBnp-kV-jYgHrHCxHBJ26kWxQW_KMaWR3T0KVz6wvnQqsMryCKmZpDJbCnWymST7cbQwG4NH4YyikgXr1K_OIZ6bw80R60zdS1ND5LMJM5FdnK2TJvB6a3CFrtoyR8rOsJOuWzL3EmOszkl9WjkRbF1Dbvj0skdaTcNK9fY0aIMUssWpDow0OhkX4pUvq16qLkt_ScnPOtNS5QRmpqdRMo3-E792PUaFCRrT7e8rRHDg6GdYBVR8mSbVYJnIj9_eDicoMta28BTpW1-2Ca5bJJcwl6m-e03u8PiMfixG1jBUEWI8ODlbguiGYZiBEAmRlF57a8cuYYAYftOg5aUdxiWORmVMRq1AzH6d-CRrQe2fb5vFWpn9RMLKI9TBgNsXjjZ9cXJ5d-6pUrqNZMkW3-2I8c6bhjy8VxZNcgV37djWI9fVkKK-Abjt_IUOEbLgkwv7lGkin2Xr5tPEPhYViUrp8zs8g0reZM9Ztg3bwqflkwm2AT6peoXep8PraMANsPOSp9scM3O6-qpUWoqUAHJbJx0pP9MmAhN7v99FI1X0U-rHSEn4Iz0T3jPAWIPrUFTWwPoPv91IgvpfzZ1AWF9IIwlkMIAEvgt-0VIR6jnyG1ovUn8tHVA0BwRN_g"
 auth2 = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg1MmM4ZjE0OGQ4ZGJjZjU4ZGMzMDUxYzI2Y2YxMTI2MzFmZTlhNmM0N2UxOWJkMGM5N2QwZDRiM2E5NWM2YWIxNzRkNzBkNWM4YWM0YjkxIn0.eyJhdWQiOiIyIiwianRpIjoiODUyYzhmMTQ4ZDhkYmNmNThkYzMwNTFjMjZjZjExMjYzMWZlOWE2YzQ3ZTE5YmQwYzk3ZDBkNGIzYTk1YzZhYjE3NGQ3MGQ1YzhhYzRiOTEiLCJpYXQiOjE1ODg4NjI5MzUsIm5iZiI6MTU4ODg2MjkzNSwiZXhwIjoxNTkwMTU4Nzc5LCJzdWIiOiIxMDczMjk1MCIsInNjb3BlcyI6W119.KAtRaWE5VsOtftG7tTxmd3Ozbo9UnS14pbdpCDHMnvasvDjhzgr0Wa62ps-g4XH2kwwE2d7vwy7ALW1qBdxbwV5YWXzm56U_1KLzdeLUjAtV7ULUoSZlqY13bYo0ocC1Q3zzFu59Y0R_erq6vwNOdYLi_PIjGWfQ0JN_lGtQdw5ADa7liEWaloGYP8XqKZ_tqkd_VDqbdOe4Jfk0qrdVjo2KTHCvpkcOwPIDR4S1SaUZuUd4TOVLEo3jJZej1NiWrkZl4FVSWxSswMn7-Hsqy1rM67-nBoVnSJJZGIBP8zJG5-Pw6o73H05X8hb5lVryeMM63KdhuDzA6b7kqtdkxuvPNi9qpHVeXz2kzA7CKa_Ivt8QPkiyKRYOALezOh-jZyiTjdNIEqQsPaKXMJyrdWWxnwBc9mBWURL3RZriKDP3tpb1yYmUz1UjXS3VG1SammUrohNdQsX-caYgmG1-gR6WWbPlGahdZA0r0RAlpYsdlD-C1WTZpTR84jIg-KvOCw_hTSuVoph0drePsQf7YZZHZ-QUwQBdYt_6hlrejDCeSoo53UFuftJzvs7E5hoh1Rr5wvTtEHZ7YqSEntMnf8o2-VI_W3mpda3XfCssBWFiHP4dJl0qhP0mZO_pRemKi2HU6moW17alGlUeBcNqdhANFTZSDKg-3GzXSZCfNP4'
 urlDailySign = "https://forge.speedtest.cn/api/v2/signv2"
 urlReplenish = "https://forge.speedtest.cn/api/v2/signv2/replenish"
 urlSignRecords = "https://forge.speedtest.cn/api/v2/signv2/records"
 urlDaily = "https://forge.speedtest.cn/api/v2/signv2/detail?timestamp="
-
+# auth2 无效
 
 def replenish(date,auth):
     Data = {
@@ -69,6 +69,7 @@ def dailySign(auth):
     "Accept-Encoding": "gzip",
     'Authorization': "Bearer {}".format(auth)
     }
+
     response = requests.post(urlDailySign,headers = headers_json)
     print(response)
     response = json.loads(response.content)
@@ -235,23 +236,47 @@ def speedUpByPC():
 
 
 def suit():    
-    speedUpByPC()
-    getRecords(auth)
+    #speedUpByPC()
+    try:
+        getRecords(auth)
+    except:
+        print("error")
     time.sleep(1)
-    dailySign(auth)
+    try:
+        dailySign(auth)
+    except:
+        print("error")
     time.sleep(1)
-    dailyCheck(auth)
+    try:
+        dailyCheck(auth)
+    except:
+        print("error")
     time.sleep(1)
-    getRecords(auth2)
+    try:
+        getRecords(auth2)
+    except:
+        print("error")
     time.sleep(1)
-    dailySign(auth2)
+    try:
+        dailySign(auth2)
+    except:
+        print("error")
     time.sleep(1)
-    dailyCheck(auth2)
+    try:
+        dailyCheck(auth2)
+    except:
+        print("error")
     time.sleep(1)
     for i in range(3):
-        speedRecordByWeb()
+        try:
+            speedRecordByWeb()
+        except:
+            print("error")
         time.sleep(15)
-        speedRecordByPC()
+        try:
+            speedRecordByPC()
+        except:
+            ("error")
         time.sleep(5)
 
   
