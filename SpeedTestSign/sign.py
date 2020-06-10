@@ -7,15 +7,14 @@ import random
 from stringToJson import StringToJSON
 from urllib.parse import urlencode
 # auth 199
-auth = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlMDBkMDI5Mzk3MWE0ZDc3M2ExMWYwMWIxYTRjMWMyMmNhYjhlZDhiZDYyNzg1Y2RhYjYyY2M1NzM4NWEwNmExZDg0ZWY4ODE4YTM1MTY1In0.eyJhdWQiOiIyIiwianRpIjoiZmUwMGQwMjkzOTcxYTRkNzczYTExZjAxYjFhNGMxYzIyY2FiOGVkOGJkNjI3ODVjZGFiNjJjYzU3Mzg1YTA2YTFkODRlZjg4MThhMzUxNjUiLCJpYXQiOjE1OTAxMzI3NTEsIm5iZiI6MTU5MDEzMjc1MSwiZXhwIjoxNTkxNDI2ODA5LCJzdWIiOiIxMDY2NDQ3MSIsInNjb3BlcyI6W119.PcV2AC_9QcfWwWlGGI6enHIHfuC_pFZwaj9v391zhsFNevBnp-kV-jYgHrHCxHBJ26kWxQW_KMaWR3T0KVz6wvnQqsMryCKmZpDJbCnWymST7cbQwG4NH4YyikgXr1K_OIZ6bw80R60zdS1ND5LMJM5FdnK2TJvB6a3CFrtoyR8rOsJOuWzL3EmOszkl9WjkRbF1Dbvj0skdaTcNK9fY0aIMUssWpDow0OhkX4pUvq16qLkt_ScnPOtNS5QRmpqdRMo3-E792PUaFCRrT7e8rRHDg6GdYBVR8mSbVYJnIj9_eDicoMta28BTpW1-2Ca5bJJcwl6m-e03u8PiMfixG1jBUEWI8ODlbguiGYZiBEAmRlF57a8cuYYAYftOg5aUdxiWORmVMRq1AzH6d-CRrQe2fb5vFWpn9RMLKI9TBgNsXjjZ9cXJ5d-6pUrqNZMkW3-2I8c6bhjy8VxZNcgV37djWI9fVkKK-Abjt_IUOEbLgkwv7lGkin2Xr5tPEPhYViUrp8zs8g0reZM9Ztg3bwqflkwm2AT6peoXep8PraMANsPOSp9scM3O6-qpUWoqUAHJbJx0pP9MmAhN7v99FI1X0U-rHSEn4Iz0T3jPAWIPrUFTWwPoPv91IgvpfzZ1AWF9IIwlkMIAEvgt-0VIR6jnyG1ovUn8tHVA0BwRN_g"
+auth = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjBlOWI5NDhhNTEyNjI2ZDU1NGVlMTBhOTk0YjNiM2U4MzYwY2QyN2I2MDQxYWFlZGU2YTZjYmMwNmJlYmY5Y2VhNGEzZDdjMTUxNGQzOGQwIn0.eyJhdWQiOiIyIiwianRpIjoiMGU5Yjk0OGE1MTI2MjZkNTU0ZWUxMGE5OTRiM2IzZTgzNjBjZDI3YjYwNDFhYWVkZTZhNmNiYzA2YmViZjljZWE0YTNkN2MxNTE0ZDM4ZDAiLCJpYXQiOjE1OTE3NjgyNzMsIm5iZiI6MTU5MTc2ODI3MywiZXhwIjoxNjIzMzA0MjczLCJzdWIiOiIxMDY2NDQ3MSIsInNjb3BlcyI6W119.HSmzaRQdUgj0RuayHJWTAhasPGnObHJO68qQ7WMn0FuL4uGjgglf0pI-wvQB9J9CIuMjxe8-jxOpZSela88uPr3hZDM4qAsCpZlN5fy9G_8wblk7xJfw8JYZIoN0tu8-il-N-W-7M7Eu1yPpzA1JUCoQ1NNixrWdrlss-RExBMT7Ri9mJiUZKsTCKG-7_YIdH_3wzGHXb9a07zfvUemyoCRe_zEMskwDgBn8ksOaOs1IScPpqah_jhlpJvDpbUDSSHfOzb12cPwRtu_LJuKNWHLox8SRwtKsTj2NGOi-TOMNekDdqrfDaSb-zlDfZoeoG9bDREf-y6cjk_8zWlF8P8x-mLxHuVZlCStaq9kYCOVofgfGk39vobiCFW2990R-rhGTY-AOwoSzT7LbW6JcbaD573viM4osPcMrHxa0SI6i7OaPdFJcNR7iZl_q9fPQ4DdTiM59NQNVw9rtCU6reYDSyUjJ0sp7nuJhd2tJtFtEgNwKCxTmNH7JLcryHAEMJs3k9lg4BCMFxIoWYmqqcJkmHyPA5g9abmBx-AidciEg5PV1Gq6WM0ka98LZBE7O_1fWyiQEUsVC6lMixsVb68uQzXe_GBvyN98fwSESBO2ZbUQpxyQnlkhaCT5yVCw8I-MgCBEPlynXbP6LGwBVnnYcYHXkGScCPY1idAsNhA4"
 # 185
-auth2 = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgzN2M4MGQyYWE0MGVhMDZjMWE0YTc4MTNiOGQzNjRhZmVmZDcwNjc2Nzg2NWYzZGU0Y2U1OWM5YzJmZTgyYzE3MGI4N2JhNzM1MjA1MDM2In0.eyJhdWQiOiIyIiwianRpIjoiODM3YzgwZDJhYTQwZWEwNmMxYTRhNzgxM2I4ZDM2NGFmZWZkNzA2NzY3ODY1ZjNkZTRjZTU5YzljMmZlODJjMTcwYjg3YmE3MzUyMDUwMzYiLCJpYXQiOjE1OTA0MTgyNzUsIm5iZiI6MTU5MDQxODI3NSwiZXhwIjoxNTkxNzExMjA2LCJzdWIiOiIxMDYyOTkwNyIsInNjb3BlcyI6W119.hdPEmJJ4hHUMjO7HwyTFh5XmOg0HRgH8uU9BamjJKUSZ7hjEgQRme83pn1KAGEsVIugKBU2huyuLpa_y1dimrwDta0JkwBICNORXSJ4Eovc4GwzXkfa-ftqYI6F-3ICMcsruQfjvMhRcwn1uvk5cR9BQ6R2XUSfBJFdUv3QWaumAmt0Jh8rFeaT2sA9M_JDsvn_zn2jWmPb1LT8OqtYTOh9YSxoC5lkR66D5hCir2CQUtjSBRYXrjHn76DfAi5gW5I0UkH7Xw8FXC1gBC6Ae84cfsCgFbr7LD9_0rl5VwbcdhJLMODVcdwyWDc6YZJ4EXy5JBGHT4WpqIlkQb1gGyEFiA__rJBEUHurD-CA0GcD8RqbW14PQ6DBpJh2mlrGhOUFKx58CCFYczUgxH7pJqsf-RW6rCtJ8DA7IBp-ikmNTNIxNOW6ynKeYE56NBkW6_G4ufiY8mNFxqURnS_Jdo5peJOU7p5akh1pY70B_n57BQQQQ3_dWjb61svfOVF69Bc8UHjaSg0Fc_MjMSYecLgzWVXjzfCUDtmWMv_YCeQTMrnLhv8tuJwHRv7FiI-tsfM2QyhZlF-kUUZ58WyuvVRwI0WVioxi2Umdx672D9zIlCOKzUJEffhLuUQ4KsF94ImahB_cxdgaY_LC4pLGoAh5rogS9IMAmCkMS0pz43h8'
+auth2 = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA3NTIwOTY2MzI2ZTAwMDE4ZGJlNjA5NDMyNjU3ZWQzMjQ2YjFhNWFhYjRjYTZjMmQ2YTc2NGRhYjczMmVlMzUyZDQ2YjJhZDc3Y2RmMmNjIn0.eyJhdWQiOiIyIiwianRpIjoiMDc1MjA5NjYzMjZlMDAwMThkYmU2MDk0MzI2NTdlZDMyNDZiMWE1YWFiNGNhNmMyZDZhNzY0ZGFiNzMyZWUzNTJkNDZiMmFkNzdjZGYyY2MiLCJpYXQiOjE1OTE3NjgwNDEsIm5iZiI6MTU5MTc2ODA0MSwiZXhwIjoxNjIzMzA0MDQxLCJzdWIiOiIxMDYyOTkwNyIsInNjb3BlcyI6W119.EZy2rZ-8-hZeoMlZE8uY7jY1nhvhH3X-nXgSW5nrWum8ZG0MhSI6v1DfsDB8_c2FPqgY2BnaLtk-yJuY_GlwADX2hp315484qzw19pgsKs-7oPzYDIN-0SFUMpMwpNu5m-mQmAODy-QSUdSVXnb8UkZSS7zf8SMy7YSESqIkuZ42gvKPMjxvgom6hTCUyxuWHIdgRfhkkzb2PqExJzgJREcW4bgHkAbh4J_NbPzxGhyWLLCptNQZcrimv2axZVYjh80xHfhsIjAEKp7D-BnzCLycFoNe0qCk-M7v59xyKxnESeNsiSksVAvHWZit8MNIR8YhaYcSZWmDjIFul8LuCTyushK7_Sq3QJzC7w_mbEY4_otsjLzjhtLckgDoR4rCPLH1h_4VN8nvoWKySh0ot66oO9BmW3b3eHO5dpPxwu3GXbKpGEFBa7xirkb_NBHM8MtGQOTLM-wszMlyvLRmsRd455Vvka7z4ji9rdwFBjyeJF8PhqM0Ysjo4G5uH3DXTaJW8FVuetNMFprryYqoPsygQ-dmKOD824QQG74oGi2B1tfTOtI_xf5Nx-PgW3qDYyRsvF5eKEI09Fc0zpz4bC3YnoYI4aJ1LNRVILxA47z0zxQshVnjHU58TmalPIzFjXfP52xn9D9wGwSjWEgKTWT5eqMTp8hElRPNP30hGuA'
 urlDailySign = "https://forge.speedtest.cn/api/v2/signv2"
 urlReplenish = "https://forge.speedtest.cn/api/v2/signv2/replenish"
 urlSignRecords = "https://forge.speedtest.cn/api/v2/signv2/records"
 urlDaily = "https://forge.speedtest.cn/api/v2/signv2/detail?timestamp="
 urlVideo = "https://forge.speedtest.cn/api/v2/task/video-ad-finish"
-# auth2 无效
 
 def replenish(date,auth):
     Data = {
@@ -135,13 +134,23 @@ def speedRecordByPC():
     response = json.loads(response.content)
     print(response)
 #speedRecordByWeb()
-
-def speedRecordByWeb():
-    cookies1 = {
-        'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d':'eyJpdiI6IkczTWVCWFViSDJncStLc0s0ZE5Ub0E9PSIsInZhbHVlIjoiZGhPaWE5cVZcL0Z0aWFJT3pnWWZMNGxIa29Xa2krUUcrQWxYcWhTTk0rQ2dNRURrdnljd1ZPVEhnYjdWWFhHN2ZSektVT2JrdTd6TFArb0ZmK3ZmbDIyakoxdG1LMHM4aUVHZXBDZittSVZzPSIsIm1hYyI6IjhmYWE4MjAzZjFmYmE3ZTYxOTU3NWI0MTU0NDUwZTc4NWY4OTU2OWExNDJhNjBkMGEwZTIwMjAyNjJlYzQ5MjgifQ',
-        'laravel_token':'eyJpdiI6IktMM0dRZHpQRWRnaGMxNHg1RDNaREE9PSIsInZhbHVlIjoiVWl4Z2dvVVhJRnA2NWs0cmJFbjdqXC80OWgwb0hMb3ZzdzRPTzg0WG9vY2xMZWNoYnRkMitFWVwvaWpyTTJQektyOVdtZ09ZWjhvdlZ5TU9qQjQrOFVvMDhCdjd0eFpQNHllRnhpR2t6QnBJQTM5cUVDUUZoM1VXVFJqajh6Zm5kT0xsK0VMWnpmYW9UTFNLVEV3czNlT21MWnViUzVuU1RBNHI4UFNpQmJ5XC9jejQ3MWZrdCt0VEVDVWtLVjUzbGlsWEI4MFF4TGQ3MGxIR2VJSzUrajAwSlpxV1pqbjE3c1Q0WkF6cVI0UkF3dHZQM3B0TktPYWpIWmwrcE9LcFNmeTJzZTgyYWFoZUpPbzVDeGN1ZkZiaGc9PSIsIm1hYyI6ImMxYzlhNzVhYTA1Y2M5YzliZGZlYjkzODNhZGU0ZmJjOTA3YzNlN2M5Njk4OWI0N2VhYjRmODY1MTVkMjcyMWEifQ',
-        'speedtest_session':'eyJpdiI6Ik1aeGhCN0JWQmFBUjRtUkJwUVdaTGc9PSIsInZhbHVlIjoiQXBhd1RyVmJKaHJDaFlGYllEVzJkRVhqUnRDektKR1drdVwvb2xINDJ6VndsVVFyTjNYdnNiaStVekFDY0VwVFAiLCJtYWMiOiIyOTI4Y2U1NTdlNzRiNDI2NTIwOWFiODdjNjhiMWE5YTEzNDExYTVhOTc1ZTIwNjczZGRkYTNmMTI3NWQyMjIzIn0'
-    }
+cookies1 = {
+        'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d':'eyJpdiI6IjNDR1VYVHdTM2FhY3B6SzZ6YlJoWnc9PSIsInZhbHVlIjoiNmJqR0UrVnEyTmZZNm90U3FKckJNMmRIODZpS1hYMEVPZTRLQXFGbFwvdmg5RER5ekdhVHJRdVNUcTMrbUk1WHlsZHBtbllvcEU5MVwvbDFWTWhUalM3WVJhZFZadldaSDJLUGJucm0yQkFadz0iLCJtYWMiOiI0MTA1ZmY0ZWI4NGQ0YTQ2NmQzNmRiMDAzYWNlYzMxMDczZWU5OTI3NzQyNGJmY2U0Mzg0NjgyOTE3ODU2NWZjIn0%3D',
+        'laravel_token':'eyJpdiI6IlhPQW14a0ZWNmVId2xFRkpxUm9EV2c9PSIsInZhbHVlIjoiUjFSa29ISXc2NHJXdjJKViswZ0l3VGpYbUllUDJ2Q3RcL096SWo4RXdkbVBqRWhMSis1VUZvRlNDeGtmbGhBajJpZEZYZ1dzY0VJQWRTSGxHaW9VcVZVV29wY1NcL1BmVFdSZE1qbkNXeEpZOTNxd21oRkV5d2xlcDhwTzRDQWRMVU1MOGNURXFhczRvNks5WVFWUEdzMnFpNXJwakVxbkcyK1NiMVpKQk9wZVc0bEgraFRzdnpaWDRcLzhHQWFqUk5kNGdcL0dHSUhxRTZwTHRuTUJ0THlXMVdMRWRDVFd2MzZ5MEkyM2pTM2lHZ2hHNEdKc3FWMnpRc1wvYjllREgzVWlmQVJZbERLdzh2YXBjeU5XQWdySGVPZz09IiwibWFjIjoiMWU3NmFiZjliMGQ3OGI2ZWVjNmYyNjFkZTRkZmQ4MWFmMjE4NzI0NGZmZGNiMDNiOWFjMTQzNTU3NWUwZDEyOSJ9',
+        'speedtest_session':'eyJpdiI6IkU5NkRhKzdlRGFtcWNhVXFzSE9XMGc9PSIsInZhbHVlIjoiZVMraVVoQ0d2WmR2OUhuaktOR3ZkUGphT01CM2dlQXdCOExcL3VLTGJMTG5IQVBiVXBjeFhFYnhtXC9rSmhIVmhNIiwibWFjIjoiNzhlMmRlYjU0YzNkNzZkZGM0NzkwYTRlNTQ1MGU4M2EyY2NmYTUwNjU2YjYwOGE2MmY3ZThhOWQ1MDM0MjY0YSJ9'
+    }#185
+cookies2 = {
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d':'eyJpdiI6IlJuUVVHd1wvOGF3WDE1Tk03RFJRVVVnPT0iLCJ2YWx1ZSI6Ik9JaG9TQno3eUJ0SUpDclpyXC9mWVdKblwvZUVQc3ZzeUdcL3gzOU9PYmdmejlybUIrb1F4c1AxTTVoMVlCcXZEQzBCMzRGbjB1Y1NxVEhwQkVzNUtxdjVyM0dWQk9YaHF3MTZTREpOdlk3TERNPSIsIm1hYyI6IjJiODRjODNkMTFjMDdkNzU0M2MwYTBhNWI4MzhlODE0YmM0ODYxOTg3NGE0YTVhM2QwYjM4ODgwNWM1ODE2ZWMifQ%3D%3D',
+    'laravel_token':'eyJpdiI6IlkyMXhPeUZTSUJGdWhQdEdnNmVcL1BBPT0iLCJ2YWx1ZSI6IlwvekFudm1OOHBjRVhLbmVXRmdNRnFwQzUxOFwvQlF1WjFOK2VYWmhQZE92YW54N3oxc3ZjM2s0RWZ4S2pzRlUzODVcL0dLSVRpeENNTjFsV044NnRURldxNEd1YzhzbDRlK0lrREprWHM2YmdUN0FicHhkRUo2SjdNYU1wSms4bjRBaXhYQng0SXlLc0xBZFwvd01uaFFZZjJjaElZSHVoV0dWd0JSRzNmaHJsTVBOT2wzb1VqK3RIU2pQN0Y2ekhJQkF1dUc3bHVMcHJKXC9RUDdJck9qcFFRVEF6d3l1RW14UUJGTWxFdjg4NFhyOXNsQ0pVZmFZMjBxbVBnRTkwXC8wZlYwN0ZRZTQ1dmppTVdXZVVCMHFmRWpnPT0iLCJtYWMiOiJlMWM5NDg3YzBmOWMyM2EyZGNmYTgwNGU3OTI5ZGRiZTg0YTkyOGViNjdhYWZmNjdkNDlkNTAxNDgzMTI1OTZkIn0%3D',
+    'speedtest_session':'eyJpdiI6IjFNV2x2XC9oSENEcllrRXFCN1pGeFpRPT0iLCJ2YWx1ZSI6InpodWZIUlVUeG1ueUlXZFo4M250bFp1eHljYkg5VUk2akJ4QlwvanA0UlpqYk5vZVwvZ2hhUUhLSVVcL1pFNDFGVk0iLCJtYWMiOiIyMTNmODVlZjYyZjUxZTYxMTA4ZTQ2N2U0YWU1MWY2ZDViMWU5NmZlY2VjOTQ0MzQxYWI5M2FhZDAzMGIzNzQ4In0%3D'
+}#199
+def speedRecordByWeb(cookies):
+    # cookies1 = {
+    #     'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d':'eyJpdiI6IkczTWVCWFViSDJncStLc0s0ZE5Ub0E9PSIsInZhbHVlIjoiZGhPaWE5cVZcL0Z0aWFJT3pnWWZMNGxIa29Xa2krUUcrQWxYcWhTTk0rQ2dNRURrdnljd1ZPVEhnYjdWWFhHN2ZSektVT2JrdTd6TFArb0ZmK3ZmbDIyakoxdG1LMHM4aUVHZXBDZittSVZzPSIsIm1hYyI6IjhmYWE4MjAzZjFmYmE3ZTYxOTU3NWI0MTU0NDUwZTc4NWY4OTU2OWExNDJhNjBkMGEwZTIwMjAyNjJlYzQ5MjgifQ',
+    #     'laravel_token':'eyJpdiI6IktMM0dRZHpQRWRnaGMxNHg1RDNaREE9PSIsInZhbHVlIjoiVWl4Z2dvVVhJRnA2NWs0cmJFbjdqXC80OWgwb0hMb3ZzdzRPTzg0WG9vY2xMZWNoYnRkMitFWVwvaWpyTTJQektyOVdtZ09ZWjhvdlZ5TU9qQjQrOFVvMDhCdjd0eFpQNHllRnhpR2t6QnBJQTM5cUVDUUZoM1VXVFJqajh6Zm5kT0xsK0VMWnpmYW9UTFNLVEV3czNlT21MWnViUzVuU1RBNHI4UFNpQmJ5XC9jejQ3MWZrdCt0VEVDVWtLVjUzbGlsWEI4MFF4TGQ3MGxIR2VJSzUrajAwSlpxV1pqbjE3c1Q0WkF6cVI0UkF3dHZQM3B0TktPYWpIWmwrcE9LcFNmeTJzZTgyYWFoZUpPbzVDeGN1ZkZiaGc9PSIsIm1hYyI6ImMxYzlhNzVhYTA1Y2M5YzliZGZlYjkzODNhZGU0ZmJjOTA3YzNlN2M5Njk4OWI0N2VhYjRmODY1MTVkMjcyMWEifQ',
+    #     'speedtest_session':'eyJpdiI6Ik1aeGhCN0JWQmFBUjRtUkJwUVdaTGc9PSIsInZhbHVlIjoiQXBhd1RyVmJKaHJDaFlGYllEVzJkRVhqUnRDektKR1drdVwvb2xINDJ6VndsVVFyTjNYdnNiaStVekFDY0VwVFAiLCJtYWMiOiIyOTI4Y2U1NTdlNzRiNDI2NTIwOWFiODdjNjhiMWE5YTEzNDExYTVhOTc1ZTIwNjczZGRkYTNmMTI3NWQyMjIzIn0'
+    # }
+    
     headers = {
     'accept': 'application/json, text/plain, */*',
     'accept-encoding':'gzip, deflate, br',
@@ -184,10 +193,10 @@ def speedRecordByWeb():
     #print(s)
     #print(md5sign(s))
     md5dataWebPage.update({'sign':s})
-    response = requests.post("https://forge.speedtest.cn/api/v2/result/my-store",data=json.dumps(md5dataWebPage),headers = headers,cookies = cookies1)
+    response = requests.post("https://forge.speedtest.cn/api/v2/result/my-store",data=json.dumps(md5dataWebPage),headers = headers,cookies = cookies)
     print(response)
     response = json.loads(response.content)
-    print(response)
+    #print(response)
 
 def speedUpByPC():
     cookiesRaw = "UM_distinctid=170947077992af-066a23f83b6287--22c1a568-144000-1709470779a12d; _ga=GA1.2.457732882.1583038364; Hm_lvt_8decfd249e4c816635a72c825e27da1a=1588741864,1588741982,1588744064,1588835592; Hm_lpvt_8decfd249e4c816635a72c825e27da1a=1588835592"
@@ -238,7 +247,7 @@ def getFromvideo(auth):
 def suit():    
     #speedUpByPC()
     try:
-        print("auth1")
+        print("auth1-------------------")
         print("getRecode imformations")
         getRecords(auth)
     except:
@@ -257,7 +266,7 @@ def suit():
         print("error")
     time.sleep(1)
     try:
-        print("auth2")
+        print("auth2-----------------------")
         print("recode imformaitons")
         getRecords(auth2)
     except:
@@ -277,28 +286,30 @@ def suit():
     time.sleep(1)
     for i in range(3):
         try:
-            print("video"+"range"+str(i))
-            print("auth2")
+            print("video "+"range"+str(i)+'---------------')
+            print("auth2 185")
             getFromvideo(auth2)
-            print("auth1")
+            print("auth1 199")
             getFromvideo(auth)
             time.sleep(40)
         except:
             print("video error")
     for i in range(3):
         try:
-            print("web speed test")
-            speedRecordByWeb()
+            print("web speed test By web---------------")
+            print("185")
+            speedRecordByWeb(cookies1)
         except:
             print("error")
         time.sleep(15)
         try:
-            print("PC speed test")
-            speedRecordByPC()
+            print("PC speed test By Web---------------------")
+            print("199")
+            speedRecordByWeb(cookies2)
         except:
             ("error")
         time.sleep(5)
-#getFromvideo(auth2)
+
 suit()
 
 
